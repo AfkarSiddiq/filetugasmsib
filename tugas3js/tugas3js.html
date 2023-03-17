@@ -9,33 +9,73 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
+<style>
+    .card {
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        width: 500px;
+        box-shadow: 10px 10px 50px  rgb(0, 0, 0);
+        height: 500px;
+        border-radius: 15px;
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px;
+    }
+    #button {
+        box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+        border-color: navajowhite;
+        border-radius: 5px;
+        backdrop-filter: blur(4px);
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        
+    }
+    #register  {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #forgot a, #register a {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
 
-<body>
+    
+</style>
+
+<body
+    style="background: url('https://2.bp.blogspot.com/-5NXGIkkL3fo/WJW-N6l6pYI/AAAAAAAABuM/LxtJsJjy0Vo0VRFxzQ9-H9J-zC9Re0-iACLcB/s1600/background%2Bkayu.jpg');">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-6 my-5">
+            <div class="col-sm-12 my-5">
                 <div class="card">
                     <div class="card-header text-center">
-                        <img src="https://dishanpan.asahankab.go.id/assets/home/images/kadis.png" alt="Profile"
+                        <img src="https://icon-library.com/images/avatar-png-icon/avatar-png-icon-1.jpg" alt="Profile"
                             width="50px" height="50px">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-center">Login Form</h5>
+                        <h2 class="card-title text-center" style="color: white; word-spacing:4px">Login Form</h2><br><br><br>
                         <form action="" id="formulir">
-                            <div class="row">
-                                <input type="text" name="email" id="email" placeholder="enter email">
+                            <div class="row" id="formulir">
+                                <input type="text" class="form-control form-control-rounded" id="email" placeholder="Username">
+                            </div><br>
+                            <div class="row" id="formulir">
+                                <input type="password" class="form-control form-control-rounded" id="password" placeholder="Password">
                             </div><br>
                             <div class="row">
-                                <input type="password" name="password" id="password" placeholder="enter password">
-                            </div><br>
-                            <div class="row">
-                                <button type="button" name="btn_login" onclick="login()">Login</button>
-                                <div class="col-md-6">
+                                <div class="col-md-12 text-center">
+                                    <button id="button" type="button" class="form-control form-control-rounded" onclick="login()">Login</button>
+                                </div>
+                                <div class="col-md-8" id="register">
                                     <p class="text-right">
                                         <a href="#">Register</a>
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col" id="forgot">
                                     <p class="text-left">
                                         <a href="#">Forgot password</a>
                                     </p>
