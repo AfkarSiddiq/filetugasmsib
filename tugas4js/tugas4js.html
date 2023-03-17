@@ -14,9 +14,9 @@
         margin-right: auto;
         margin-left: auto;
         position: relative;
-        width: 500px;
+        width: 450px;
         box-shadow: 10px 10px 50px  rgb(0, 0, 0);
-        height: 500px;
+        height: 450px;
         border-radius: 15px;
         backdrop-filter: blur(4px);
         background-color: rgba(0, 0, 0, 0.2);
@@ -43,15 +43,18 @@
         font-weight: bold;
         font-size: 15px;
     }
+    #card{
+        padding-top: 8rem;
+    }
 
     
 </style>
 
 <body
-    style="background: url('https://2.bp.blogspot.com/-5NXGIkkL3fo/WJW-N6l6pYI/AAAAAAAABuM/LxtJsJjy0Vo0VRFxzQ9-H9J-zC9Re0-iACLcB/s1600/background%2Bkayu.jpg');">
+    style="background: url('https://wallpapercave.com/wp/wp6910416.jpg');">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 my-5">
+            <div class="col-sm-12" id="card">
                 <div class="card">
                     <div class="card-header text-center">
                         <img src="https://icon-library.com/images/avatar-png-icon/avatar-png-icon-1.jpg" alt="Profile"
@@ -61,7 +64,7 @@
                         <h2 class="card-title text-center" style="color: white; word-spacing:4px">Login Form</h2><br><br><br>
                         <form action="" id="formulir">
                             <div class="row" id="formulir">
-                                <input type="text" class="form-control form-control-rounded" id="email" placeholder="Username">
+                                <input type="text" class="form-control form-control-rounded" id="username" placeholder="Username">
                             </div><br>
                             <div class="row" id="formulir">
                                 <input type="password" class="form-control form-control-rounded" id="password" placeholder="Password">
@@ -70,7 +73,7 @@
                                 <div class="col-md-12 text-center">
                                     <button id="button" type="button" class="form-control form-control-rounded" onclick="login()">Login</button>
                                 </div>
-                                <div class="col-md-8" id="register">
+                                <div class="col-md-7" id="register">
                                     <p class="text-right">
                                         <a href="#">Register</a>
                                     </p>
