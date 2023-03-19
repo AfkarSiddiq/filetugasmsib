@@ -7,10 +7,10 @@ function tambah(){
     if(a1 && a2){
         frm.hasil.value = total;
     }else{
-        alert("Maaf angka belum terisi");
+        alert("Maaf yang Anda Input bukan angka");
         return false;
     }
-}
+}   
 
 // pengurangan
 function kurang(){
@@ -21,7 +21,7 @@ function kurang(){
     if(a1 && a2){
         frm.hasil.value = total;
     }else{
-        alert("Maaf angka belum terisi");
+        alert("Maaf yang Anda Input bukan angka");
         return false;
     }
 }
@@ -35,7 +35,7 @@ function kali(){
     if(a1 && a2){
         frm.hasil.value = total;
     }else{
-        alert("Maaf angka belum terisi");
+        alert("Maaf yang Anda Input bukan angka");
         return false;
     }
 }
@@ -49,7 +49,7 @@ function bagi(){
     if(a1 && a2){
         frm.hasil.value = total;
     }else{
-        alert("Maaf angka belum terisi");
+        alert("Maaf yang Anda Input bukan angka");
         return false;
     }
 }
@@ -62,7 +62,7 @@ function pangkat(){
     if(a1 && a2){
         frm.hasil.value = total;
     }else{
-        alert("Maaf angka belum terisi");
+        alert("Maaf yang Anda Input bukan angka");
         return false;
     }
 }
