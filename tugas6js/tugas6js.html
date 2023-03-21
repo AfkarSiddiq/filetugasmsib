@@ -13,6 +13,7 @@
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgb(219, 198, 174);
     }
+
     .table {
         border: 1px solid black;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -50,7 +51,10 @@
         let g7 = new Gempa('Palu', 5.6);
         let g8 = new Gempa('Singkil', 6);
 
-        //print info gempa
+        let g = [g1, g2, g3, g4, g5, g6, g7, g8];
+
+
+        //create table
         document.write(`
         <table class="table" align="center" width="90%" cellpadding="7">
     
@@ -62,51 +66,22 @@
                 <td>Lokasi</td>
                 <td>Skala</td>
                 <td>Dampak</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g1.lokasi}</td>
-                <td>${g1.skala}</td>
-                <td align="left">${g1.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g2.lokasi}</td>
-                <td>${g2.skala}</td>
-                <td align="left">${g2.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g3.lokasi}</td>
-                <td>${g3.skala}</td>
-                <td align="left">${g3.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g4.lokasi}</td>
-                <td>${g4.skala}</td>
-                <td align="left">${g4.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g5.lokasi}</td>
-                <td>${g5.skala}</td>
-                <td align="left">${g5.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g6.lokasi}</td>
-                <td>${g6.skala}</td>
-                <td align="left">${g6.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g7.lokasi}</td>
-                <td>${g7.skala}</td>
-                <td align="left">${g7.dampak()}</td>
-            </tr>
-            <tr align="center" bgcolor="#FFF1E6">
-                <td>${g8.lokasi}</td>
-                <td>${g8.skala}</td>
-                <td align="left">${g8.dampak()}</td>
-            </tr>
-        </table>
-        <p align="center">*Dampak gempa berdasarkan skala richter</p>
-        <p align="center">&copy; M. Afkar Siddiq 2023</p>
-        `)
+            </tr>`);
+
+        //print info gempa
+        for (var i = 0; i < g.length; i++) {
+            document.write(`
+           <tr align="center" bgcolor="#FFF1E6">
+            <td>${g[i].lokasi}</td>
+            <td>${g[i].skala}</td>
+            <td align="left">${g[i].dampak()}</td>
+           </tr>
+           `)
+        }
+        document.write(`</table>
+    <p align="center">*Dampak gempa berdasarkan skala richter</p>
+    <p align="center">&copy; M. Afkar Siddiq 2023</p>
+    `);
     </script>
 </body>
 
