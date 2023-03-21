@@ -8,6 +8,17 @@
     <title>Tugas gempa JS</title>
 </head>
 
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(219, 198, 174);
+    }
+    .table {
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
 <body>
     <script>
         class Gempa {
@@ -19,44 +30,84 @@
                 if (this.skala <= 2) {
                     return 'gempa tidak terasa';
                 } else if (this.skala > 2 && this.skala <= 4) {
-                    return 'bangunan retak2';
+                    return 'bangunan retak-retak';
                 } else if (this.skala > 4 && this.skala <= 6) {
                     return 'bangunan roboh';
                 } else if (this.skala > 6) {
                     return 'selain bangunan roboh & berpotensi tsunami';
-                } else{
+                } else {
                     'Error';
                 }
             }
         }
         //create object
         let g1 = new Gempa('Jawa Timur', 2);
-        let g2 = new Gempa('Aceh', 9.6);
+        let g2 = new Gempa('Banda Aceh', 9.6);
         let g3 = new Gempa('Jepang', 7.3);
-        let g4 = new Gempa('Indonesia', 1.7);
+        let g4 = new Gempa('Takengon', 1.7);
         let g5 = new Gempa('Jawa Barat', 3.2);
         let g6 = new Gempa('Padang', 2.8);
-        let g7 = new Gempa('Papua', 5.6);
+        let g7 = new Gempa('Palu', 5.6);
         let g8 = new Gempa('Singkil', 6);
 
         //print info gempa
         document.write(`
-        <h1>Info Gempa</h1>
-        ${g1.lokasi} : ${g1.skala} : ${g1.dampak()} <hr>
-        ${g2.lokasi} : ${g2.skala} : ${g2.dampak()} <hr>
-        ${g3.lokasi} : ${g3.skala} : ${g3.dampak()} <hr>
-        ${g4.lokasi} : ${g4.skala} : ${g4.dampak()} <hr>
-        ${g5.lokasi} : ${g5.skala} : ${g5.dampak()} <hr>
-        ${g6.lokasi} : ${g6.skala} : ${g6.dampak()} <hr>
-        ${g7.lokasi} : ${g7.skala} : ${g7.dampak()} <hr>
-        ${g8.lokasi} : ${g8.skala} : ${g8.dampak()} <hr> 
-
-        `)
-        
-    </script>    
+        <table class="table" align="center" width="90%" cellpadding="7">
     
-
-
+            <thead>
+                <H1 align="center">Info Gempa</H1>
+            </thead>
+    
+            <tr align = "center" bgcolor="#ba9261">
+                <td>Lokasi</td>
+                <td>Skala</td>
+                <td>Dampak</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g1.lokasi}</td>
+                <td>${g1.skala}</td>
+                <td align="left">${g1.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g2.lokasi}</td>
+                <td>${g2.skala}</td>
+                <td align="left">${g2.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g3.lokasi}</td>
+                <td>${g3.skala}</td>
+                <td align="left">${g3.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g4.lokasi}</td>
+                <td>${g4.skala}</td>
+                <td align="left">${g4.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g5.lokasi}</td>
+                <td>${g5.skala}</td>
+                <td align="left">${g5.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g6.lokasi}</td>
+                <td>${g6.skala}</td>
+                <td align="left">${g6.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g7.lokasi}</td>
+                <td>${g7.skala}</td>
+                <td align="left">${g7.dampak()}</td>
+            </tr>
+            <tr align="center" bgcolor="#FFF1E6">
+                <td>${g8.lokasi}</td>
+                <td>${g8.skala}</td>
+                <td align="left">${g8.dampak()}</td>
+            </tr>
+        </table>
+        <p align="center">*Dampak gempa berdasarkan skala richter</p>
+        <p align="center">&copy; M. Afkar Siddiq 2023</p>
+        `)
+    </script>
 </body>
 
 </html>
