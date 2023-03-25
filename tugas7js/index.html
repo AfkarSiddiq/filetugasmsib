@@ -10,7 +10,7 @@
     <style>
         .flex-container {
             display: flex;
-            background-color: DodgerBlue;
+            background-color: pink;
         }
 
         .flex-container>div {
@@ -57,6 +57,11 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- ini isi hewan Peliharaan -->
+                    <div class="flex-container" id="hewanPeliharaan">
+                        <div class="kucing">Kucing</div>
+                        <div class="anjing">Anjing</div>
+                        <div class="BurungHantu">Burung Hantu</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +76,11 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <!-- Ini isi hewan buas -->
+                    <div class="flex-container" id="hewanBuas">
+                        <div class="Ular">Ular</div>
+                        <div class="singa">Singa</div>
+                        <div class="elang">Elang</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,13 +89,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+        
     <script>
         $(document).ready(function () {
             //hewan ternak
+            //ayam
             $("div.ayam").click(function () {
                 $(this).css({
                     background: "url('image/ayam.jpeg')",
-                    backgroundSize: "cover"
+                    backgroundSize: "cover",
                 });
             })
             $("div.ayam").click(function () {
@@ -95,9 +107,16 @@
                     'autoplay': 'autoplay'
                 }).appendTo("div.ayam");
             })
+            $("div.ayam").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+            //bebek
             $("div.bebek").click(function () {
                 $(this).css({
-                    background:"url('image/bebek.jpeg')",
+                    background: "url('image/bebek.jpeg')",
                     backgroundSize: "cover",
                 });
             })
@@ -108,9 +127,17 @@
                     'autoplay': 'autoplay'
                 }).appendTo("div.bebek");
             })
+            $("div.bebek").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+
+            //sapi
             $("div.sapi").click(function () {
                 $(this).css({
-                    background:"url('image/sapi.jpeg')",
+                    background: "url('image/sapi.jpeg')",
                     backgroundSize: "cover",
                 });
             })
@@ -121,9 +148,134 @@
                     'autoplay': 'autoplay'
                 }).appendTo("div.sapi");
             })
+            $("div.sapi").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
             //hewan peliharaan
-
+            //kucing
+            $("div.kucing").click(function () {
+                $(this).css({
+                    background: "url('image/kucing.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            $("div.kucing").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-kucing.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.kucing");
+            })
+            $("div.kucing").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+            //anjing
+            $("div.anjing").click(function () {
+                $(this).css({
+                    background: "url('image/anjing.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            $("div.anjing").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-anjing.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.anjing");
+            })
+            $("div.anjing").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+            //burung hantu
+            $("div.BurungHantu").click(function () {
+                $(this).css({
+                    background: "url('image/burung-hantu.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            $("div.BurungHantu").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-burung-hantu.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.BurungHantu");
+            })
+            $("div.BurungHantu").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
             //hewan buas
+            //ular
+            $("div.Ular").click(function () {
+                $(this).css({
+                    background: "url('image/ular.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            $("div.Ular").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-desis-ular.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.Ular");
+            })
+            $("div.Ular").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+            $("div.singa").click(function () {
+                $(this).css({
+                    background: "url('image/singa.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            //singa
+            $("div.singa").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-singa.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.singa");
+            })
+            $("div.singa").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
+            //elang
+            $("div.elang").click(function () {
+                $(this).css({
+                    background: "url('image/elang.jpeg')",
+                    backgroundSize: "cover",
+                });
+            })
+            $("div.elang").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/suara-burung-elang.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div.elang");
+            })
+            $("div.elang").dblclick(function(){
+                $(this).css(
+                    {background : "white"}
+                )
+                $("audio").remove();
+            })
         })
     </script>
     <p align="center">&copy; M.Afkar Siddiq 2023</p>
