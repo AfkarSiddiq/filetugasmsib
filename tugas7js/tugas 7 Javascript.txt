@@ -1,0 +1,6 @@
+Buatlah aplikasi web sederhana untuk menampilkan hewan dan suaranya:
+
+1. Kotak-kotak nama hewan gunakan css flexbox
+2. Gunakan event click pada jquery saat diklik kotak hewannya, maka akan tampil gambar hewan dan suara hewannya secara otomatis
+3. File gambar-gambar hewan disimpan dalam folder images
+4. File suara-suara hewan disimpan dalam folder audio
